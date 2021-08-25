@@ -1,5 +1,5 @@
 # PROJECT 4 README <!-- omit in toc -->
-# Customization
+# Customization Shop
 
 
 - [Overview](#overview)
@@ -21,16 +21,15 @@
 
 ## Overview
 
-_**Customization** is website where the user can log in and input a car and customize it with items that the user can think of and it would calculate the total for that built. The options can range from any car model that the user wants and they can add interior parts and exteriors parts._
+_**Customization Shop** is a website where the user can log in and input a car and customize it with items that the user can think of and it would calculate the total for that built. The options can range from any car model that the user wants and they can add interior parts and exteriors parts._
 
 
 <br>
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
-_The **Customization** MVP will cover the user access and their own builts. There needs to be a table for cars and associated with that is a table for interior upgrades and another table for exterior upgrades. they user will be able to input all of these upgrades from their names, description, price and an image._
+_The **Customization Shop** MVP will cover the user access and their own builts. There needs to be a table for cars and associated with that is a table for interior upgrades and another table for exterior upgrades. they user will be able to input all of these upgrades from their names, description, price and an image._
 
 <br>
 
@@ -46,7 +45,7 @@ _The **Customization** MVP will cover the user access and their own builts. Ther
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
+
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
@@ -61,7 +60,7 @@ _The **Customization** MVP will cover the user access and their own builts. Ther
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+
 
 [Login](https://wireframe.cc/pro/pp/8bee06419466803#1)
 
@@ -95,13 +94,11 @@ _The **Customization** MVP will cover the user access and their own builts. Ther
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
 
 [Customization Component Tree ](https://lucid.app/lucidchart/invitations/accept/inv_76b9b9b4-d063-4a23-835a-22e530e3fd74?viewport_loc=56%2C-131%2C2447%2C1517%2C0_0)
 
 #### Component Architecture
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
@@ -130,7 +127,7 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
+
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -156,7 +153,6 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
 [ERD](https://lucid.app/lucidchart/invitations/accept/inv_21aa0275-7f96-423d-bde6-79f5b1439999?viewport_loc=341%2C146%2C1627%2C1009%2C0_0)
 <br>
@@ -165,7 +161,7 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+
 > have a page where you can see your builts and compare them 
 > have the options built into the website
 > style it to make it look more user friendly 
