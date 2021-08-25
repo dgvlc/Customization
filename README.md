@@ -1,1 +1,182 @@
+# PROJECT 4 README <!-- omit in toc -->
 # Customization
+
+
+- [Overview](#overview)
+- [MVP](#mvp)
+  - [Goals](#goals)
+  - [Libraries and Dependencies](#libraries-and-dependencies)
+  - [Client (Front End)](#client-front-end)
+    - [Wireframes](#wireframes)
+    - [Component Tree](#component-tree)
+    - [Component Architecture](#component-architecture)
+    - [Time Estimates](#time-estimates)
+  - [Server (Back End)](#server-back-end)
+    - [ERD Model](#erd-model)
+- [Post-MVP](#post-mvp)
+- [Code Showcase](#code-showcase)
+- [Code Issues & Resolutions](#code-issues--resolutions)
+
+<br>
+
+## Overview
+
+_**Customization** is website where the user can log in and input a car and customize it with items that the user can think of and it would calculate the total for that built. The options can range from any car model that the user wants and they can add interior parts and exteriors parts._
+
+
+<br>
+
+## MVP
+
+> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
+
+_The **Customization** MVP will cover the user access and their own builts. There needs to be a table for cars and associated with that is a table for interior upgrades and another table for exterior upgrades. they user will be able to input all of these upgrades from their names, description, price and an image._
+
+<br>
+
+### Goals
+
+- _create backend with the correct tables._
+- _add the logic to generate a built._
+- _render the corresponding data to the correct screens._
+- _style the screens to give a good user experience._
+- _etc._
+
+<br>
+
+### Libraries and Dependencies
+
+> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
+
+|     Library      | Description                                |
+| :--------------: | :----------------------------------------- |
+|      Ruby       | _create the backend of the project._ |
+|   React   | _this is used to create the frontend of the project._ |
+| React Router | _this will be used to display the different screens of the project._ |
+
+
+<br>
+
+### Client (Front End)
+
+#### Wireframes
+
+> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+
+[Login](https://wireframe.cc/pro/pp/8bee06419466803#1)
+
+- 
+
+[Register](https://wireframe.cc/pro/pp/8bee06419466803#q1ggjura)
+
+- 
+
+[Cars](https://wireframe.cc/pro/pp/8bee06419466803#7efpai65)
+
+- 
+
+[Car Create](https://wireframe.cc/pro/pp/8bee06419466803#ufjk35eh)
+
+- 
+
+[Car Details](https://wireframe.cc/pro/pp/8bee06419466803#n8yzn8x5)
+
+- 
+
+[Car Edit](https://wireframe.cc/pro/pp/8bee06419466803#isz0cs26)
+
+-
+
+[Interior Create](https://wireframe.cc/pro/pp/8bee06419466803#2cvmuuyf)
+
+-
+
+[Exterior Create](https://wireframe.cc/pro/pp/8bee06419466803#myekbmxx)
+
+#### Component Tree
+
+> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
+
+[Customization Component Tree ](https://lucid.app/lucidchart/invitations/accept/inv_76b9b9b4-d063-4a23-835a-22e530e3fd74?viewport_loc=56%2C-131%2C2447%2C1517%2C0_0)
+
+#### Component Architecture
+
+> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
+
+``` structure
+
+src
+|__ layout/
+      |__ Layout.jsx
+|__ containers/
+      |__ MainContainer.jsx
+|__ screens/
+      |__ Login.jsx
+      |__ Register.jsx
+      |__ Cars.jsx
+      |__ CarCreate.jsx
+      |__ Cardetails.jsx
+      |__ CarEdit.jsx
+      |__ InteriorCreate.jsx
+      |__ ExteriorCreate.jsx
+|__ services/
+      |__ api_config.js
+      |__ auth.js
+      |__ exterior.js
+      |__ interior.js
+      |__ cars.js
+
+```
+
+#### Time Estimates
+
+> Use this section to estimate the time necessary to build out each of the components you've described above.
+
+| Task                | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------- | :------: | :------------: | :-----------: | :---------: |
+| create wireframes   |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| update readme |    L    |     3 hrs      |     1 hrs     |     TBD     |
+| create tables model    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| create CRUD backend |    H     |     4 hrs      |     1 hrs     |     TBD     |
+| create services frontend    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Create CRUD Actions frontend |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create components frontend |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| create screens frontend   |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| sign in Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| sign up |    L     |     3 hrs      |     1 hrs     |     TBD     |
+| render images on screen   |    M    |     3 hrs      |     2 hrs     |    3 hrs    |
+|  style screens |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+
+> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+
+<br>
+
+### Server (Back End)
+
+#### ERD Model
+
+> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+
+[ERD](https://lucid.app/lucidchart/invitations/accept/inv_21aa0275-7f96-423d-bde6-79f5b1439999?viewport_loc=341%2C146%2C1627%2C1009%2C0_0)
+<br>
+   
+***
+
+## Post-MVP
+
+> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+> have a page where you can see your builts and compare them 
+> have the options built into the website
+> style it to make it look more user friendly 
+> have other modes of transportation aside from cars 
+
+***
+
+## Code Showcase
+
+> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
+## Code Issues & Resolutions
+
+> Use this section to list of all major issues encountered and their resolution.
