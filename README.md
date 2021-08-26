@@ -154,7 +154,7 @@ src
 #### ERD Model
 
 
-[ERD](https://lucid.app/lucidchart/invitations/accept/inv_21aa0275-7f96-423d-bde6-79f5b1439999?viewport_loc=341%2C146%2C1627%2C1009%2C0_0)
+[ERD](https://lucid.app/lucidchart/invitations/accept/inv_227d002f-6735-45c0-aed8-92ddef276808)
 <br>
    
 ***
