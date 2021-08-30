@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getOneCar } from '../services/cars';
 import { addUpgradeToCar } from '../services/upgrades';
+import './CarDetail.css'
 
 
 export default function CarDetail(props) {
@@ -23,7 +24,6 @@ export default function CarDetail(props) {
     setSelectedUpgrade(value);
   };
 
-  // Our handle submit for adding the flavor to our food
   const handleSubmit = async (e) => {
     e.preventDefault();
     const carItem = await addUpgradeToCar(id, selectedUpgrade);
@@ -31,18 +31,17 @@ export default function CarDetail(props) {
   };
 
   return (
-    <div>
+    <div className='detail-page'>
       <h3>{carItem?.name}</h3>
+      <img src={carItem?.image_url}/>
       {carItem?.upgrades.map(() => (
         <p key={upgrades.id}>
           {upgrades.name}
         </p>
       ))}
-      <form onSubmit={handleSubmit}>
-        <select onChange={handleChange} defaultValue='default'>
-
-        </select>
-      </form>
+      <Link to='/upgrades'>
+        <button>Add Upgrades</button>
+      </Link>
       
     </div>
   )

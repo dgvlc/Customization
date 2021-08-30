@@ -36,6 +36,12 @@ export default function Maincontainer(props) {
     history.push('/cars');
   };
 
+  const handleCreateUpgrade = async (formData) => {
+    const upgradeData = await postUpgrade(formData);
+    setUpgrades((prevState) => [...prevState, upgradeData]);
+    history.push('/cars/:id');
+  };
+
   const handleUpdate = async (id, formData) => {
     const carData = await putCar(id, formData);
     setCars((prevState) =>
@@ -51,24 +57,34 @@ export default function Maincontainer(props) {
     setCars((prevState) => prevState.filter((car) => car.id !== id));
   };
 
+  const handleDeleteUpdate = async (id) => {
+    await deleteUpgrade(id)
+    setUpgrades((prevState) => prevState.filter((upgrade) => upgrade.id !== id))
+  }
+
   return (
     <div>
       <Switch>
         <Route path='/upgrades'>
-          <Upgrades upgrades={upgrades} />
+          <Upgrades upgrades={upgrades}
+            handleCreateUpgrade={handleCreateUpgrade}
+            handleDeleteUpdate={handleDeleteUpdate}/>
         </Route>
         <Route path='/cars/:id/edit'>
-          <CarEdit cars={cars} handleUpdate={handleUpdate} />
+          <CarEdit cars={cars} handleUpdate={handleUpdate}
+        currentUser={currentUser} />
         </Route>
         <Route path='/cars/new'>
-          <CarCreate handleCreate={handleCreate} />
+          <CarCreate handleCreate={handleCreate}
+            currentUser={currentUser} />
         </Route>
         <Route path='/cars/:id'>
-          <CarDetail upgrades={upgrades} />
+          <CarDetail upgrades={upgrades}
+          currentUser={currentUser}/>
         </Route>
-        <Route path='/cars'>
+        <Route exact path='/cars'>
           <Cars
-            Cars={Cars}
+            cars={cars}
             handleDelete={handleDelete}
             currentUser={currentUser}
           />

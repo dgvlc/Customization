@@ -3,7 +3,7 @@ class UpgradesController < ApplicationController
 
 
   def index
-    @upgrades = Upgrades.all
+    @upgrades = Upgrade.all
 
     render json: @upgrades
   end
@@ -38,5 +38,4 @@ class UpgradesController < ApplicationController
     def upgrade_params
       params.require(:upgrade)
     end
-end
   end
