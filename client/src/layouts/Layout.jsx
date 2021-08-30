@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom';
+import './Layout.css';
 
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
-    <header>
-      <h1>Cuystomization Shop</h1>
+    <header className='header'>
+      <h1 className='title'>Customization Shop</h1>
+      <div className='beginning-page'>
+        <img></img>
+      </div>
       {currentUser ? (
         <div>
           <p>{currentUser.username}</p>
