@@ -1,9 +1,8 @@
 import {useState}from 'react'
+import './CarCreate.css'
 
 export default function CarCreate(props) {
-  const [formData, setFormData] = useState({
-    name: '',
-  });
+  const [formData, setFormData] = useState({});
   const { name } = formData;
   const { handleCreate } = props;
 
@@ -16,7 +15,7 @@ export default function CarCreate(props) {
   };
 
   return (
-    <form
+    <form className='create-form'
       onSubmit={(e) => {
         e.preventDefault();
         handleCreate(formData);

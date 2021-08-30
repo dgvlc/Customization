@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react'
 import {useParams} from 'react-router-dom';
 
 export default function CarEdit(props) {
-  const [formData, setFormData] = useState({
-    name: ''
-  })
+  const [formData, setFormData] = useState({})
   const {cars, handleUpdate} = props;
   const {id} = useParams();
 
