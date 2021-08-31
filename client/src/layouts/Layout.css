@@ -1,7 +1,42 @@
 .title {
   text-align: left;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #845870;
 }
 
 .header {
-  background-color: aquamarine;
+  background-color: #234365;
+  height: 180px;
+  padding-top: 0;
+  border-bottom: 3px #807f75;
+}
+
+.username {
+  text-align: left;
+  margin-top: 0;
+  color: #858f9b;
+}
+
+.user-div {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.login {
+  text-decoration: none;
+  color: #858f9b;
+  font-size: 80px;
+}
+
+.cars-section {
+  text-align: right;
+  padding-right: 100px;
+  padding-bottom: 10px;
+}
+
+.car-link {
+  text-decoration: none;
+  color: #858f9b;
+  font-size: 25px;
 }

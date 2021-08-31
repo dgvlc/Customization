@@ -16,7 +16,8 @@ class UpgradesController < ApplicationController
   end
 
   def create 
-    @upgrade = Upgrade.new(upgrade_params)
+    @car = Car.find(params[:car_id])
+    @upgrade = Upgrade.where(car_id: @car.id).new(upgrade_params)
 
     if @upgrade.save
       render json: @upgrade, status: :created, location: @post

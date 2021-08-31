@@ -35,10 +35,11 @@ export default function CarDetail(props) {
       <h3>{carItem?.name}</h3>
       <img src={carItem?.image_url} />
       <p>{carItem?.make}</p>
-      {carItem?.upgrades.map(() => (
-        <p key={upgrades.id}>
-          {upgrades.name}
-        </p>
+
+      {carItem?.upgrades.map((upgrade) => (
+        <div key={upgrade.id}>
+          <p>{upgrade.name}</p>
+        </div>
       ))}
       <Link to='/upgrades'>
         <button>Add Upgrades</button>

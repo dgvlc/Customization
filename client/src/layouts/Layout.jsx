@@ -7,17 +7,16 @@ export default function Layout(props) {
     <header className='header'>
       <h1 className='title'>Customization Shop</h1>
       {currentUser ? (
-        <div>
-          <p>{currentUser.username}</p>
-          <button onClick={handleLogout}>Logout</button>
+        <div className='user-div'>
+          <p className='username'>{currentUser.username}</p>
+          <button className='logout' onClick={handleLogout}>Logout</button>
         </div>
       ) : (
-        <Link to='/login'>Login/Register</Link>
+        <Link className='login' to='/login'>Login/Register</Link>
       )}
-      <hr />
       {currentUser && (
-        <div>
-          <Link to='/cars'>cars</Link>
+        <div className='cars-section'>
+          <Link className='car-link' to='/cars'>cars</Link>
         </div>
       )}
       {props.children}

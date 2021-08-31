@@ -3,7 +3,7 @@ import './CarCreate.css'
 
 export default function CarCreate(props) {
   const [formData, setFormData] = useState({});
-  const { name } = formData;
+  const { name, image_url } = formData;
   const { handleCreate } = props;
 
   const handleChange = (e) => {
@@ -25,6 +25,10 @@ export default function CarCreate(props) {
       <label>
         Name:
         <input type='text' name='name' value={name} onChange={handleChange} />
+      </label>
+      <label>
+        image_url:
+        <input type='text' name='image_url' value={image_url} onChange={handleChange} />
       </label>
       <button>Submit</button>
     </form>
