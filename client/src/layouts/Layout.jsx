@@ -12,7 +12,9 @@ export default function Layout(props) {
           <button className='logout' onClick={handleLogout}>Logout</button>
         </div>
       ) : (
-        <Link className='login' to='/login'>Login/Register</Link>
+          <div className='login-div'>
+            <Link className='login' to='/login'>Login/Register</Link>
+          </div>
       )}
       {currentUser && (
         <div className='cars-section'>

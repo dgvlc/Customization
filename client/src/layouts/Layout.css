@@ -1,8 +1,10 @@
 .title {
   text-align: left;
   margin-top: 0;
+  padding-top: 10px;
   margin-bottom: 10px;
   color: #845870;
+  font-size: 40px;
 }
 
 .header {
@@ -22,11 +24,15 @@
   text-align: left;
   padding-left: 10px;
 }
+.login-div {
+  text-align: right;
+  margin-right: 20px;
+}
 
 .login {
   text-decoration: none;
   color: #858f9b;
-  font-size: 80px;
+  font-size: 60px;
 }
 
 .cars-section {
