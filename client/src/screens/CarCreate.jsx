@@ -19,7 +19,7 @@ export default function CarCreate(props) {
       onSubmit={(e) => {
         e.preventDefault();
         handleCreate(formData);
-      }}
+      }}  
     >
       <h3>Create a Car</h3>
       <label>

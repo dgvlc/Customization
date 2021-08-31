@@ -9,7 +9,7 @@ export default function CarDetail(props) {
   const [carItem, setCarItem] = useState(null);
   const [selectedUpgrade, setSelectedUpgrade] = useState('');
   const { id } = useParams();
-  const { upgrades } = props;
+  const { upgrades, handleDelete} = props;
 
   useEffect(() => {
     const fetchCarItem = async () => {
@@ -33,7 +33,8 @@ export default function CarDetail(props) {
   return (
     <div className='detail-page'>
       <h3>{carItem?.name}</h3>
-      <img src={carItem?.image_url}/>
+      <img src={carItem?.image_url} />
+      <p>{carItem?.make}</p>
       {carItem?.upgrades.map(() => (
         <p key={upgrades.id}>
           {upgrades.name}
@@ -42,7 +43,14 @@ export default function CarDetail(props) {
       <Link to='/upgrades'>
         <button>Add Upgrades</button>
       </Link>
-      
+            <div>
+              <Link to={`/cars/${id}/edit`}>
+                <button>Edit</button>
+        </Link>
+        <Link to={'/cars'}>
+          <button onClick={() => handleDelete(id)}>Delete</button>
+        </Link>
+            </div> 
     </div>
   )
 }

@@ -57,7 +57,7 @@ export default function Maincontainer(props) {
     setCars((prevState) => prevState.filter((car) => car.id !== id));
   };
 
-  const handleDeleteUpdate = async (id) => {
+  const handleDeleteUpgrade = async (id) => {
     await deleteUpgrade(id)
     setUpgrades((prevState) => prevState.filter((upgrade) => upgrade.id !== id))
   }
@@ -67,8 +67,7 @@ export default function Maincontainer(props) {
       <Switch>
         <Route path='/upgrades'>
           <Upgrades upgrades={upgrades}
-            handleCreateUpgrade={handleCreateUpgrade}
-            handleDeleteUpdate={handleDeleteUpdate}/>
+            handleCreateUpgrade={handleCreateUpgrade}/>
         </Route>
         <Route path='/cars/:id/edit'>
           <CarEdit cars={cars} handleUpdate={handleUpdate}
@@ -80,12 +79,14 @@ export default function Maincontainer(props) {
         </Route>
         <Route path='/cars/:id'>
           <CarDetail upgrades={upgrades}
-          currentUser={currentUser}/>
+            currentUser={currentUser}
+            handleDeleteUpdate={handleDeleteUpgrade}
+            handleDelete={handleDelete}/>
+          
         </Route>
         <Route exact path='/cars'>
           <Cars
             cars={cars}
-            handleDelete={handleDelete}
             currentUser={currentUser}
           />
         </Route>
