@@ -2,17 +2,27 @@ import { Link, useHistory } from 'react-router-dom'
 import './Cars.css'
 
 export default function Cars(props) {
-  const { cars, handleDelete, currentUser } = props
+  const { cars} = props
   const history = useHistory()
 
   return (
     <div className='car-page'>
-    <h3>cars</h3>
+    <h3 className='cars-title'>Cars on the Shop</h3>
       {cars.map((car) => (
-        <div key={car.id} onClick= {() => (
+        <div className='cars-div' key={car.id} onClick= {() => (
           history.push(`/cars/${car.id}`))}>
-          <img src={car.image_url} />
-            <p>{car?.name}</p> 
+          <div className='image-div'>
+          <p>{car?.name}</p>
+            <img src={car.image_url} />
+          </div>
+          <div className='information-div'>
+          <p>Make: {car?.make}</p>
+          <p>Model: {car?.model}</p>
+          <p>Year: {car?.year}</p>
+          <p>Description: {car?.description}</p>
+          <p>Color: {car?.color}</p>
+            <p>Base Price: {car?.base_price}</p>
+          </div>
   
           {/* {currentUser?.id === car.user_id && (
             <div>
@@ -23,10 +33,12 @@ export default function Cars(props) {
             </div> 
         )} */}
         </div>
-      ))} 
-      <Link to='/cars/new'>
-        <button>Create</button>
-      </Link>
+      ))}
+      <div className='create-div'>
+      <Link className='create-link' to='/cars/new'>
+        <button className='create-button'>Create</button>
+        </Link>
+      </div>
     </div>
   )
 }
