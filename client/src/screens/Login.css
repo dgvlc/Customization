@@ -1,4 +1,13 @@
 .form {
   height: 100vh;
   background-color: cadetblue;
+  margin: 100px;
+}
+.username-div {
+  padding: 20px;
+}
+
+.login-title {
+  padding-top: 100px;
+  font-size: 50px;
 }

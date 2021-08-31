@@ -22,7 +22,8 @@ export default function Login(props) {
       e.preventDefault()
       handleLogin(formData)
     }}>
-      <h3 >Login</h3>
+      <h3 className='login-title' >Login</h3>
+      <div className='username-div'>
       <label>
         Username:
         <input
@@ -31,8 +32,9 @@ export default function Login(props) {
           value={formData.username}
           onChange={handleChange}
         />
-      </label>
-      <br />
+        </label>
+      </div>
+      <div className='password-div'>
       <label>
         Password:
         <input
@@ -41,8 +43,9 @@ export default function Login(props) {
         value={formData.password}
         onChange={handleChange} 
         />
-      </label>
-      <br />
+        </label>
+      </div>
+
       <Link to='/register'>Register</Link>
       <button>Submit</button> 
     </form>
