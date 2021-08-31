@@ -14,14 +14,14 @@ export default function Cars(props) {
           <img src={car.image_url} />
             <p>{car?.name}</p> 
   
-          {currentUser?.id === car.user_id && (
+          {/* {currentUser?.id === car.user_id && (
             <div>
-              <Link to={`/cars/${car.id}/edit/`}>
+              <Link to={`/cars/${car.id}/edit`}>
                 <button>Edit</button>
               </Link>
               <button onClick={() => handleDelete(car.id)}>Delete</button>
             </div> 
-        )}
+        )} */}
         </div>
       ))} 
       <Link to='/cars/new'>
