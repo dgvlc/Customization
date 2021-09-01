@@ -3,7 +3,7 @@ class UpgradesController < ApplicationController
 
 
   def index
-    @upgrades = Upgrades.all
+    @upgrades = Upgrade.all
 
     render json: @upgrades
   end
@@ -16,7 +16,8 @@ class UpgradesController < ApplicationController
   end
 
   def create 
-    @upgrade = Upgrade.new(upgrade_params)
+    @car = Car.find(params[:car_id])
+    @upgrade = Upgrade.where(car_id: @car.id).new(upgrade_params)
 
     if @upgrade.save
       render json: @upgrade, status: :created, location: @post
@@ -38,5 +39,4 @@ class UpgradesController < ApplicationController
     def upgrade_params
       params.require(:upgrade)
     end
-end
   end

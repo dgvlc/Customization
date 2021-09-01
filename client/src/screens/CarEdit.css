@@ -1,0 +1,16 @@
+.edit-form {
+  height: 100vh;
+  background-color: lightcoral;
+}
+
+.edit-div {
+  display: grid;
+  margin-top: 30px;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.edit-button-div {
+  margin-top: 20px;
+  text-align: center;
+}
