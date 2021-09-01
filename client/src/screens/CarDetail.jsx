@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getOneCar } from '../services/cars';
-import { addUpgradeToCar } from '../services/upgrades';
+// import { addUpgradeToCar } from '../services/upgrades';
 import './CarDetail.css'
 
 
 export default function CarDetail(props) {
   const [carItem, setCarItem] = useState(null);
-  const [carUpgrade, setCarUpgrade] = useState(null);
+  // const [carUpgrade, setCarUpgrade] = useState(null);
   const { id } = useParams();
   const {handleDelete, handleDeleteUpgrade} = props;
 
