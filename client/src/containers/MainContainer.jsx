@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { getAllCars, postCar, putCar, deleteCar } from '../services/cars';
-import { getAllUpgrades, postUpgrade, addUpgradeToCar, deleteUpgrade} from '../services/upgrades';
+import { getAllUpgrades, postUpgrade, deleteUpgrade} from '../services/upgrades';
 import Upgrades from '../screens/Upgrades';
 import Cars from '../screens/Cars';
 import CarCreate from '../screens/CarCreate';
