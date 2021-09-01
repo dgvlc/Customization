@@ -9,7 +9,7 @@ export default function CarDetail(props) {
   const [carItem, setCarItem] = useState(null);
   const [selectedUpgrade, setSelectedUpgrade] = useState('');
   const { id } = useParams();
-  const {handleDelete} = props;
+  const {handleDelete, handleDeleteUpgrade} = props;
 
   useEffect(() => {
     const fetchCarItem = async () => {
@@ -36,7 +36,7 @@ export default function CarDetail(props) {
       <h3 className='detail-title'>{carItem?.name}</h3>
       <div className='base-div'>
       <div className='image-div'>
-          <img className='image' src={carItem?.image_url} />
+          <img className='image' src={carItem?.image_url} alt={carItem?.make} />
       </div>
       <div className='info-div'>
       <p>Make: {carItem?.make}</p>
@@ -48,17 +48,15 @@ export default function CarDetail(props) {
         </div>
         <div className='buttons'>
               <Link to={`/cars/${id}/edit`}>
-                <button>Edit</button>
+                <button className='edit-button'>Edit</button>
         </Link>
-        {/* <Link to={'/cars'}> */}
           <button onClick={() => handleDelete(carItem?.id)}>Delete</button>
-        {/* </Link> */}
             </div> 
       </div>
       {carItem?.upgrades.map((upgrade) => (
         <div className='upgrade-div' key={upgrade.id}>
           <div className='upgrade-image-div'>
-            <img className='upgrade-image' src={upgrade.image_url} />
+            <img className='upgrade-image' src={upgrade.image_url} alt={upgrade.upgrade_type} />
           </div>
           <div className='upgrade-info'>
           <p>{upgrade.name}</p>
@@ -66,19 +64,12 @@ export default function CarDetail(props) {
           <p> Cost: {upgrade.price}</p>
             <p>{upgrade.upgrade_type}</p>
           </div>
+          <button className='delete-upgrade' onClick={() => handleDeleteUpgrade(upgrade?.id)}>Delete</button>
         </div>
       ))}
-      <Link to='/upgrades'>
-        <button>Add Upgrades</button>
+      <Link className='upgrade-link' to='/upgrades'>
+        <button className='upgrade-button'>Add Upgrades</button>
       </Link>
-            {/* <div className='buttons'>
-              <Link to={`/cars/${id}/edit`}>
-                <button>Edit</button>
-        </Link>
-        <Link to={'/cars'}>
-          <button onClick={() => handleDelete(id)}>Delete</button>
-        </Link>
-            </div>  */}
     </div>
   )
 }

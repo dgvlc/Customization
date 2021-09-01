@@ -13,7 +13,7 @@ export default function Cars(props) {
           history.push(`/cars/${car.id}`))}>
           <div className='image-div'>
           <p>{car?.name}</p>
-            <img src={car?.image_url} />
+            <img className='car-image' src={car?.image_url} alt={car?.make} />
           </div>
           <div className='information-div'>
           <p>Make: {car?.make}</p>
@@ -23,15 +23,6 @@ export default function Cars(props) {
           <p>Color: {car?.color}</p>
             <p>Base Price: {car?.base_price}</p>
           </div>
-  
-          {/* {currentUser?.id === car.user_id && (
-            <div>
-              <Link to={`/cars/${car.id}/edit`}>
-                <button>Edit</button>
-              </Link>
-              <button onClick={() => handleDelete(car.id)}>Delete</button>
-            </div> 
-        )} */}
         </div>
       ))}
       <div className='create-div'>

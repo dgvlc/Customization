@@ -82,7 +82,7 @@ export default function Maincontainer(props) {
         <Route path='/cars/:id'>
           <CarDetail upgrades={upgrades}
             currentUser={currentUser}
-            handleDeleteUpdate={handleDeleteUpgrade}
+            handleDeleteUpgrade={handleDeleteUpgrade}
             handleDelete={handleDelete}
             handleCreateUpgrade={handleCreateUpgrade}/>
           
