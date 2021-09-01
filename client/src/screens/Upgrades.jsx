@@ -3,9 +3,12 @@ import './Upgrades.css'
 
 
 export default function Upgrades(props) {
-  const [carItem, setCarItem] = useState(null);
   const [formData, setFormData] = useState({})
-  const { name, image_url} = formData;
+  const {
+    name,
+    image_url,
+  } = formData;
+  
   const { handleCreateUpgrade } = props
   
   const handleChange = (e) => {
