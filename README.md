@@ -114,19 +114,19 @@ src
 
 | Task                         | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------------- | :------: | :------------: | :-----------: | :---------: |
-| create wireframes            |    L     |     3 hrs      |     4 hrs     |    3 hrs    |
-| update readme                |    L     |     3 hrs      |     1 hrs     |     TBD     |
-| create tables model          |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| create CRUD backend          |    H     |     4 hrs      |     2 hrs     |     TBD     |
-| create services frontend     |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions frontend |    H     |     5 hrs      |     8 hrs     |     TBD     |
-| Create components frontend   |    H     |     3 hrs      |     4 hrs     |     TBD     |
-| create screens frontend      |    L     |     3 hrs      |     4 hrs     |    3 hrs    |
-| sign in Form                 |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| sign up                      |    L     |     3 hrs      |     1 hrs     |     TBD     |
-| render images on screen      |    M     |     4 hrs      |     4 hrs     |    3 hrs    |
-| style screens                |    H     |     3 hrs      |     3 hrs     |     TBD     |
-| TOTAL                        |          |     40 hrs     |    37 hrs     |     TBD     |
+| create wireframes            |    L     |     3 hrs      |     4 hrs     |    4 hrs    |
+| update readme                |    L     |     3 hrs      |     1 hrs     |    1 hrs    |
+| create tables model          |    L     |     3 hrs      |     2 hrs     |    2 hrs    |
+| create CRUD backend          |    H     |     4 hrs      |     2 hrs     |    2 hrs    |
+| create services frontend     |    L     |     3 hrs      |     2 hrs     |    2 hrs    |
+| Create CRUD Actions frontend |    H     |     5 hrs      |     8 hrs     |    8 hrs    |
+| Create components frontend   |    H     |     3 hrs      |     4 hrs     |    4 hrs    |
+| create screens frontend      |    L     |     3 hrs      |     4 hrs     |    4 hrs    |
+| sign in Form                 |    L     |     3 hrs      |     2 hrs     |    2 hrs    |
+| sign up                      |    L     |     3 hrs      |     1 hrs     |    1hrs     |
+| render images on screen      |    M     |     4 hrs      |     4 hrs     |    4 hrs    |
+| style screens                |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+| TOTAL                        |          |     40 hrs     |    37 hrs     |   37 hrs    |
 
 > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
