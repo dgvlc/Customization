@@ -23,6 +23,43 @@
   padding-left: 30px;
 }
 
+@media screen and (max-width: 1024px) {
+  .base-div {
+    display: grid;
+  }
+
+  .image {
+    width: 500px;
+  }
+
+  .buttons {
+    justify-content: right;
+    align-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .base-div {
+    display: grid;
+  }
+
+  .image {
+    width: 300px;
+  }
+
+  .buttons {
+    justify-content: right;
+    align-content: flex-start;
+  }
+
+  .upgrade-info {
+    padding-left: 20px;
+  }
+
+  .delete-button {
+    height: 10px;
+  }
+}
 .upgrade-div {
   display: flex;
   padding-bottom: 10px;
@@ -47,4 +84,18 @@
   justify-content: center;
   align-content: center;
   height: 200px;
+  margin-left: 30px;
+}
+
+.edit-button {
+  margin-bottom: 20px;
+}
+
+.upgrade-link {
+  margin: 30px;
+  padding-bottom: 20px;
+}
+
+.upgrade-button {
+  margin-bottom: 30px;
 }

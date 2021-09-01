@@ -18,7 +18,7 @@ export default function Layout(props) {
       )}
       {currentUser && (
         <div className='cars-section'>
-          <Link className='car-link' to='/cars'>cars</Link>
+          <Link className='car-link' to='/cars'>Cars Lobby</Link>
         </div>
       )}
       {props.children}

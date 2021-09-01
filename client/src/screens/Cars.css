@@ -1,5 +1,6 @@
 .car-page {
   background-image: linear-gradient(to right, #f3f2f5, #208288);
+  width: 100%;
 }
 
 .cars-title {
@@ -26,6 +27,26 @@
   padding: 10px;
   color: black;
   background-image: radial-gradient(circle, #9d774c, #f0e9e3, #208288);
+}
+
+@media screen and (max-width: 800px) {
+  .information-div {
+    display: none;
+  }
+
+  .car-image {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .information-div {
+    display: none;
+  }
+
+  .car-image {
+    width: 300px;
+  }
 }
 
 .create-div {

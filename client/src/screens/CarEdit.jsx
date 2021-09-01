@@ -44,7 +44,7 @@ export default function CarEdit(props) {
     if (cars.length) {
       prefillFormData()
     }
-  }, [cars])
+  }, [cars, id])
 
   const handleChange = (e) => {
     const {name, value} = e.target;
@@ -59,7 +59,8 @@ export default function CarEdit(props) {
     onSubmit={(e) => {
 				e.preventDefault();
 				handleUpdate(id, formData);
-			}}>
+      }}>
+      <div className='edit-div'>
       <label>
         Name:
         <input 
@@ -131,8 +132,11 @@ export default function CarEdit(props) {
           value={base_price} 
           onChange={handleChange}
         />
-      </label>
-      <button>Submit</button>
+        </label>
+      </div>
+      <div className='edit-button-div'>
+        <button className='edit-submit'>Submit</button>
+      </div>
     </form>
   )
 }
