@@ -105,8 +105,7 @@ src
 |__ services/
       |__ api_config.js
       |__ auth.js
-      |__ exterior.js
-      |__ interior.js
+      |__ upgrades.js
       |__ cars.js
 
 ```

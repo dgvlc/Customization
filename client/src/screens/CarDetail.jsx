@@ -7,7 +7,7 @@ import './CarDetail.css'
 
 export default function CarDetail(props) {
   const [carItem, setCarItem] = useState(null);
-  const [selectedUpgrade, setSelectedUpgrade] = useState('');
+  const [carUpgrade, setCarUpgrade] = useState(null);
   const { id } = useParams();
   const {handleDelete, handleDeleteUpgrade} = props;
 
@@ -19,16 +19,14 @@ export default function CarDetail(props) {
     fetchCarItem();
   }, [id]);
 
-  // const handleChange = (e) => {
-  //   const { value } = e.target;
-  //   setSelectedUpgrade(value);
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const carItem = await addUpgradeToCar(id, selectedUpgrade);
-  //   setCarItem(carItem);
-  // };
+  // useEffect(() => {
+  //   const fetchCarUpgrade = async (e) => {
+  //     e.preventDefault();
+  //     const upgradeData = await addUpgradeToCar(id);
+  //     setCarUpgrade(upgradeData);
+  //   }
+  
+  // })
 
   return (
     <div className='detail-page'>
