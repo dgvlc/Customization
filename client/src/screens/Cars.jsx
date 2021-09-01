@@ -13,7 +13,7 @@ export default function Cars(props) {
           history.push(`/cars/${car.id}`))}>
           <div className='image-div'>
           <p>{car?.name}</p>
-            <img src={car.image_url} />
+            <img src={car?.image_url} />
           </div>
           <div className='information-div'>
           <p>Make: {car?.make}</p>
@@ -36,7 +36,7 @@ export default function Cars(props) {
       ))}
       <div className='create-div'>
       <Link className='create-link' to='/cars/new'>
-        <button className='create-button'>Create</button>
+        <button className='create-button'>Create a built</button>
         </Link>
       </div>
     </div>

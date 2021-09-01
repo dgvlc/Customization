@@ -50,12 +50,13 @@ export default function Maincontainer(props) {
         return car.id === Number(id) ? carData : car;
       })
     );
-    history.push('/cars');
+    history.push('/cars/:id');
   };
 
   const handleDelete = async (id) => {
     await deleteCar(id);
     setCars((prevState) => prevState.filter((car) => car.id !== id));
+    history.push('/cars')
   };
 
   const handleDeleteUpgrade = async (id) => {
